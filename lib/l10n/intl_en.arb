@@ -1,0 +1,21 @@
+{
+  "home_app_bar_title": "Demo app",
+  "home_get_started_title": "GET STARTED",
+  "home_get_register_title": "REGISTER",
+  "home_powered_by_title": "Powered by",
+  "home_username_initial": "Username",
+  "home_password_initial": "Password",
+  "home_or_title": "OR",
+  "home_alert_message": "Error",
+  "notes_appbar_title": "My notes",
+  "notes_favorites_title": "Favorites",
+  "notes_all_notes_title": "All notes",
+  "detail_notes_title": "Title",
+  "detail_notes_hint_name": "Name",
+  "detail_notes_note": "Note",
+  "detail_notes_hint_note": "Description",
+  "detail_notes_color_picker_title": "Choose background color",
+  "detail_notes_save_button_title": "SAVE",
+  "detail_notes_delete_button_title": "Delete"
+
+}
