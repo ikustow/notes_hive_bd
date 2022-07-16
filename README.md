@@ -10,6 +10,8 @@
 | Backend service | Hive                                       |
 | Design          | Flat minimalism                            |
 | Platform        | Mobile only                                |
+![Screen_Recording_2022-07-16_at_20 53 01](https://user-images.githubusercontent.com/36426291/179366757-7762a563-5113-405f-9749-688a9f8b89bd.gif)
+![Screen_Recording_2022-07-16_at_20 54 22](https://user-images.githubusercontent.com/36426291/179366779-b6ad81d8-5ba1-4927-b2b0-419b0b9dd92c.gif)
 
 
 ## App screens
