@@ -1,16 +1,23 @@
-# notes_hive_bd
+# Notes App with Hive
 
-A new Flutter project.
+### Flutter pet project.
 
-## Getting Started
+## About the project
 
-This project is a starting point for a Flutter application.
+| State manager   | Bloc                                       |
+|-----------------|--------------------------------------------|
+| Auth service    | Hive                                       |
+| Backend service | Hive                                       |
+| Design          | Flat minimalism                            |
+| Platform        | Mobile only                                |
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## App screens
+### Main screens
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="https://user-images.githubusercontent.com/36426291/179363474-2f5fc40d-3767-468e-aeee-0624d1def735.gif" width="250" height="500">
+
+Tabs
+- Home - Start your new quiz by category
+- Progress - check your current status
+- About - more details and Sign out option
