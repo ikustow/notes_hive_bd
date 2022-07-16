@@ -34,7 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("SAVE"),
         "detail_notes_title": MessageLookupByLibrary.simpleMessage("Title"),
         "home_alert_message": MessageLookupByLibrary.simpleMessage("Error"),
-        "home_app_bar_title": MessageLookupByLibrary.simpleMessage("Demo app"),
+        "home_app_bar_title": MessageLookupByLibrary.simpleMessage("Notes"),
         "home_get_register_title":
             MessageLookupByLibrary.simpleMessage("REGISTER"),
         "home_get_started_title":

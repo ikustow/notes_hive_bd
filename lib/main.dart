@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
     return MultiRepositoryProvider(
       providers: [
         RepositoryProvider(create: (context) => AuthenticationService()),
+
         RepositoryProvider(create: (context) => NoteService()),
       ],
       child: MaterialApp(
