@@ -19,17 +19,17 @@ class _NotesWidgetState extends State<NotesWidget> {
 
     final notes = widget.notesList;
 
-    Icon outlinedIcon = Icon(Icons.favorite_border_outlined);
-    Icon filledIcon = Icon(Icons.favorite);
+    Icon outlinedIcon = const Icon(Icons.favorite_border_outlined);
+    Icon filledIcon = const Icon(Icons.favorite);
 
-    colorValueParse(SringValue) {
-      int value = int.parse(SringValue, radix: 16);
-      Color otherColor = new Color(value);
+    colorValueParse(stringValue) {
+      int value = int.parse(stringValue, radix: 16);
+      Color otherColor = Color(value);
       return otherColor;
     }
 
     return MasonryGridView.count(
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       addAutomaticKeepAlives: true,
 
       shrinkWrap: true,
@@ -70,20 +70,20 @@ class _NotesWidgetState extends State<NotesWidget> {
             key: ValueKey(notes[index].key),
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 8,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Text(
                       notes[index].date.substring(0, 10),
-                      style: TextStyle(fontSize: 12),
+                      style: const TextStyle(fontSize: 12),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 36,
                     ),
                     IconButton(
@@ -99,24 +99,24 @@ class _NotesWidgetState extends State<NotesWidget> {
                 ),
 
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       notes[index].title,
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                          const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       notes[index].note,
                       maxLines: 6,
-                      style: TextStyle(fontSize: 16),
+                      style: const TextStyle(fontSize: 16),
                     ),
                   ),
                 ),

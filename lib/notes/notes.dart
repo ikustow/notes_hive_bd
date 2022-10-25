@@ -41,12 +41,12 @@ class NotesPage extends StatelessWidget {
                 child: Column(
                   children: [
                      Padding(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
                           S.of(context).notes_favorites_title,
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 20),
                         ),
                       ),
@@ -64,13 +64,13 @@ class NotesPage extends StatelessWidget {
                           ),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                minimumSize: Size(16, 32),
+                                minimumSize: const Size(16, 32),
                                 primary: Colors.deepPurple,
                               ),
                               onPressed: () async {
                                 final result = await showDialog<List>(
                                     context: context,
-                                    builder: (context) => Dialog(
+                                    builder: (context) => const Dialog(
                                           child: CreateNewTask(),
                                         ));
                                 if (result != null) {

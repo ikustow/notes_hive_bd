@@ -29,7 +29,7 @@ class NoteService {
   }
 
   void addTask(final List noteResult, final String username) {
-    DateTime now = new DateTime.now();
+    DateTime now = DateTime.now();
     var date = now.toString();
     _notes.add(Note(1, noteResult[0].toString(), noteResult[1].toString(),
         false, noteResult.elementAt(2), date, 1, username));
@@ -80,18 +80,18 @@ class NoteService {
 
 
 
-    final String backgroundColorG = Color.fromRGBO(129, 222, 163, 1).toString();
+    final String backgroundColorG = const Color.fromRGBO(129, 222, 163, 1).toString();
     String valueStringG = backgroundColorG.split('(0x')[1].split(')')[0];
 
-    final String backgroundColorP = Color.fromRGBO(204, 179, 255, 1).toString();
+    final String backgroundColorP = const Color.fromRGBO(204, 179, 255, 1).toString();
     String valueStringP = backgroundColorP.split('(0x')[1].split(')')[0];
 
-    final String backgroundColorPink = Color.fromRGBO(255, 179, 179, 1).toString();
+    final String backgroundColorPink = const Color.fromRGBO(255, 179, 179, 1).toString();
     String valueStringPink = backgroundColorPink.split('(0x')[1].split(')')[0];
 
 
 
-    DateTime now = new DateTime.now();
+    DateTime now = DateTime.now();
     var date = now.toString();
     _notes.add(Note(1, 'Title 1', "Demo Description", false, valueStringG,
         date, 1, 'Demo'));

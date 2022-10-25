@@ -4,7 +4,7 @@ part 'note.g.dart';
 @HiveType(typeId: 2)
 class Note extends HiveObject{
   @HiveField(0)
-  final int id_test;
+  final int idTest;
   @HiveField(1)
   final String title;
   @HiveField(2)
@@ -20,6 +20,6 @@ class Note extends HiveObject{
   @HiveField(7)
   final String username;
 
-  Note(this.id_test, this.title, this.note, this.completed, this.color, this.date, this.categoryId, this.username);
+  Note(this.idTest, this.title, this.note, this.completed, this.color, this.date, this.categoryId, this.username);
 
 }

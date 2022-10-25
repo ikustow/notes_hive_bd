@@ -13,7 +13,7 @@ class NotesLoadedState extends NotesState {
   final List<Note> notes;
   final String username;
 
-  NotesLoadedState(
+  const NotesLoadedState(
       this.notes,
       this.username,
       );
@@ -22,6 +22,6 @@ class NotesLoadedState extends NotesState {
   // TODO: implement props
   List<Object?> get props => [
     notes,
-    this.username,
+    username,
   ];
 }

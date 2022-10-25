@@ -16,7 +16,7 @@ class DividersRow extends StatelessWidget {
       )),
       Text(
         S.of(context).home_or_title,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 16,
           fontWeight: FontWeight.w400,
         ),

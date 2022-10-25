@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:notes_hive_bd/services/authentication.dart';
@@ -17,7 +15,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       final user = await _auth.authenticateUser(event.username, event.password);
       if (user != null) {
         emit(SuccessfulLoginState(user));
-        emit(HomeInitial());
+        emit(const HomeInitial());
       }
     });
 
@@ -26,7 +24,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       await _auth.init();
       await _note.init();
 
-      emit(HomeInitial());
+      emit(const HomeInitial());
     });
 
     on<RegisterAccountEvent>((event, emit) async {
@@ -36,11 +34,11 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           emit(SuccessfulLoginState(event.username));
           break;
         case UserCreationResult.failure:
-          emit(HomeInitial(error: "There's been an error"));
+          emit(const HomeInitial(error: "There's been an error"));
 
           break;
-        case UserCreationResult.already_exists:
-          emit(HomeInitial(error: "User already exists"));
+        case UserCreationResult.alreadyExists:
+          emit(const HomeInitial(error: "User already exists"));
 
           break;
       }

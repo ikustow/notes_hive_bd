@@ -8,7 +8,7 @@ class LoginEvent extends HomeEvent {
   final String username;
   final String password;
 
-  LoginEvent(this.username, this.password);
+  const LoginEvent(this.username, this.password);
   @override
   // TODO: implement props
   List<Object?> get props => [username, password];
@@ -25,7 +25,7 @@ class RegisterAccountEvent extends HomeEvent {
   final String username;
   final String password;
 
-  RegisterAccountEvent(this.username, this.password);
+  const RegisterAccountEvent(this.username, this.password);
 
   @override
   // TODO: implement props

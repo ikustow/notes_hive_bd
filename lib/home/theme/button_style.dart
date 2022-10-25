@@ -7,12 +7,12 @@ abstract class AppButtonStyle {
 
     foregroundColor: MaterialStateProperty.all(primaryColor),
     textStyle: MaterialStateProperty.all(
-      TextStyle(
+      const TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.w300,
       ),
     ),
     padding: MaterialStateProperty.all(
-        EdgeInsets.symmetric(horizontal: 24, vertical: 8)),
+        const EdgeInsets.symmetric(horizontal: 24, vertical: 8)),
   );
 }

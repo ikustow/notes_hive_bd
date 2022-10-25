@@ -33,7 +33,7 @@ class NoteAdapter extends TypeAdapter<Note> {
     writer
       ..writeByte(8)
       ..writeByte(0)
-      ..write(obj.id_test)
+      ..write(obj.idTest)
       ..writeByte(1)
       ..write(obj.title)
       ..writeByte(2)

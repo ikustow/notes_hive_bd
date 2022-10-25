@@ -9,7 +9,7 @@ class AuthenticationService {
     _users = await Hive.openBox<User>('usersBox');
 
 
-    final success = await _users.values.any((element) =>
+    final success = _users.values.any((element) =>
     element.username == "Demo" && element.password == "Demo");
 
     if (success) {
@@ -23,7 +23,7 @@ class AuthenticationService {
 
   Future<String?> authenticateUser(
       final String username, final String password) async {
-    final success = await _users.values.any((element) =>
+    final success = _users.values.any((element) =>
         element.username == username && element.password == password);
 
     if (success) {
@@ -40,16 +40,17 @@ class AuthenticationService {
     );
 
     if (alreadyExists) {
-      return UserCreationResult.already_exists;
+      return UserCreationResult.alreadyExists;
     }
 
     try {
       _users.add(User(username, password));
       return UserCreationResult.success;
+    // ignore: unused_catch_clause
     } on Exception catch (ex) {
       return UserCreationResult.failure;
     }
   }
 }
 
-enum UserCreationResult { success, failure, already_exists }
+enum UserCreationResult { success, failure, alreadyExists }

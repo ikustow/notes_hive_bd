@@ -39,10 +39,10 @@ class HomePage extends StatelessWidget {
             }
             if (state is HomeInitial) {
               if (state.error != null) {
-                print(state.error);
+
                 showDialog(
                   context: context,
-                  builder: (context) => alertDialogSwidget(errorMessage: state.error!,)
+                  builder: (context) => AlertDialogSwidget(errorMessage: state.error!,)
                 );
               }
             }
@@ -53,8 +53,8 @@ class HomePage extends StatelessWidget {
 
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Image(image: AssetImage('note.png')),
-                  SizedBox(
+                  const Image(image: AssetImage('note.png')),
+                  const SizedBox(
                     height: 32,
                   ),
                   InputsFieldWidget(
@@ -77,7 +77,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      DividersRow(),
+                      const DividersRow(),
                       Padding(
                         padding: const EdgeInsets.all(4.0),
                         child: SizedBox(
@@ -92,10 +92,10 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       Text(S.of(context).home_powered_by_title),
-                      SizedBox(height: 8),
-                      Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: [
+                      const SizedBox(height: 8),
+                      Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: const [
 
                         Image(image: AssetImage('flutter_bloc.png'),width: 96, height: 96,),
 

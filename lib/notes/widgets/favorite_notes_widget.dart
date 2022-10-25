@@ -17,20 +17,20 @@ class _FavoriteNotesWidgetState extends State<FavoriteNotesWidget> {
 
     final notes = widget.notesList;
 
-    Icon outlinedIcon = Icon(Icons.favorite_border_outlined);
-    Icon filledIcon = Icon(Icons.favorite);
+    Icon outlinedIcon = const Icon(Icons.favorite_border_outlined);
+    Icon filledIcon = const Icon(Icons.favorite);
 
 
-    colorValueParse(SringValue) {
-      int value = int.parse(SringValue, radix: 16);
-      Color otherColor = new Color(value);
+    colorValueParse(stringValue) {
+      int value = int.parse(stringValue, radix: 16);
+      Color otherColor = Color(value);
       return otherColor;
     }
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 0),
       child: AlignedGridView.count(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         crossAxisCount: 2,
         mainAxisSpacing: 4,
@@ -45,16 +45,16 @@ class _FavoriteNotesWidgetState extends State<FavoriteNotesWidget> {
 
               children: [
 
-                SizedBox(height: 4,),
+                const SizedBox(height: 4,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SizedBox(width: 16,),
+                    const SizedBox(width: 16,),
                     Text(
                       notes[index].date.substring(0, 10),
-                      style: TextStyle(fontSize: 10),
+                      style: const TextStyle(fontSize: 10),
                     ),
-                    SizedBox(width: 48,),
+                    const SizedBox(width: 48,),
                     IconButton(onPressed: (){
                       BlocProvider.of<NotesBloc>(context).add(ToggleNoteEvent(notes[index].title));
                     }, icon: (notes[index].completed == true)
@@ -64,23 +64,23 @@ class _FavoriteNotesWidgetState extends State<FavoriteNotesWidget> {
                 ),
 
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 14, vertical: 0),
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 0),
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       notes[index].title,
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 14, vertical: 4),
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4),
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       notes[index].note,
                       maxLines: 2,
-                      style: TextStyle(fontSize: 14),
+                      style: const TextStyle(fontSize: 14),
                     ),
                   ),
                 ),

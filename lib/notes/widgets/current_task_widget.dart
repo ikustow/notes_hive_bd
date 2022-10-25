@@ -7,7 +7,7 @@ class CurrentTaskWidget extends StatefulWidget {
   final String description;
   final int id;
 
-  CurrentTaskWidget(
+  const CurrentTaskWidget(
       {Key? key,
       required this.title,
       required this.description,
@@ -26,10 +26,10 @@ class _CurrentTaskWidgetState extends State<CurrentTaskWidget> {
   BorderSide pressedBorders = pressedBordersStyle;
   BorderSide unpressedBorders = unpressedBordersStyle;
 
-  int button_no_1 = 1;
-  int button_no_2 = 2;
-  int button_no_3 = 3;
-  int button_no_4 = 4;
+  int buttonNo1 = 1;
+  int buttonNo2 = 2;
+  int buttonNo3 = 3;
+  int buttonNo5 = 4;
 
   int currentButton = 1;
 
@@ -48,16 +48,16 @@ class _CurrentTaskWidgetState extends State<CurrentTaskWidget> {
           height: 16,
         ),
          Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
           child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 S.of(context).detail_notes_title,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               )),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
           child: TextFormField(
             controller: _inputTitleController,
             minLines: 1,
@@ -65,24 +65,24 @@ class _CurrentTaskWidgetState extends State<CurrentTaskWidget> {
             keyboardType: TextInputType.multiline,
             decoration: InputDecoration(
               hintText: widget.title,
-              hintStyle: TextStyle(color: hintColor),
-              border: OutlineInputBorder(
+              hintStyle: const TextStyle(color: hintColor),
+              border: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
               ),
             ),
           ),
         ),
          Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
           child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 S.of(context).detail_notes_note,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               )),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
           child: TextFormField(
             controller: _inputDescriptionController,
             minLines: 10,
@@ -90,20 +90,20 @@ class _CurrentTaskWidgetState extends State<CurrentTaskWidget> {
             keyboardType: TextInputType.multiline,
             decoration: InputDecoration(
               hintText: widget.description,
-              hintStyle: TextStyle(color: hintColor),
-              border: OutlineInputBorder(
+              hintStyle: const TextStyle(color: hintColor),
+              border: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
               ),
             ),
           ),
         ),
          Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
           child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 S.of(context).detail_notes_color_picker_title,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               )),
         ),
         Row(
@@ -111,7 +111,7 @@ class _CurrentTaskWidgetState extends State<CurrentTaskWidget> {
           children: [
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                side: (currentButton == button_no_1)
+                side: (currentButton == buttonNo1)
                     ? pressedBorders
                     : unpressedBorders,
                 primary: greenBackgroundColor,
@@ -119,14 +119,14 @@ class _CurrentTaskWidgetState extends State<CurrentTaskWidget> {
               onPressed: () {
                 setState(() {
                   _colorValue = greenBackgroundColor;
-                  currentButton = button_no_1;
+                  currentButton = buttonNo1;
                 });
               },
-              child: Text(''),
+              child: const Text(''),
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                side: (currentButton == button_no_2)
+                side: (currentButton == buttonNo2)
                     ? pressedBorders
                     : unpressedBorders,
                 primary: purpleBackgroundColor,
@@ -134,14 +134,14 @@ class _CurrentTaskWidgetState extends State<CurrentTaskWidget> {
               onPressed: () {
                 setState(() {
                   _colorValue = purpleBackgroundColor;
-                  currentButton = button_no_2;
+                  currentButton = buttonNo2;
                 });
               },
-              child: Text(''),
+              child: const Text(''),
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                side: (currentButton == button_no_3)
+                side: (currentButton == buttonNo3)
                     ? pressedBorders
                     : unpressedBorders,
                 primary: pinkBackgroundColor,
@@ -149,14 +149,14 @@ class _CurrentTaskWidgetState extends State<CurrentTaskWidget> {
               onPressed: () {
                 setState(() {
                   _colorValue = pinkBackgroundColor;
-                  currentButton = button_no_3;
+                  currentButton = buttonNo3;
                 });
               },
-              child: Text(''),
+              child: const Text(''),
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                side: (currentButton == button_no_4)
+                side: (currentButton == buttonNo5)
                     ? pressedBorders
                     : unpressedBorders,
                 primary: yellowBackgroundColor,
@@ -164,10 +164,10 @@ class _CurrentTaskWidgetState extends State<CurrentTaskWidget> {
               onPressed: () {
                 setState(() {
                   _colorValue = yellowBackgroundColor;
-                  currentButton = button_no_4;
+                  currentButton = buttonNo5;
                 });
               },
-              child: Text(''),
+              child: const Text(''),
             ),
           ],
         ),

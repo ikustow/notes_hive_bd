@@ -7,7 +7,7 @@ abstract class NotesEvent extends Equatable {
 class LoadNotesEvent extends NotesEvent {
   final String username;
 
-  LoadNotesEvent(this.username);
+  const LoadNotesEvent(this.username);
   @override
   // TODO: implement props
   List<Object?> get props => [username];
@@ -18,7 +18,7 @@ class AddNoteEvent extends NotesEvent {
   final List noteResult;
 
 
-  AddNoteEvent(this.noteResult);
+  const AddNoteEvent(this.noteResult);
 
   @override
   // TODO: implement props
@@ -31,7 +31,7 @@ class UpdateNoteEvent extends NotesEvent {
   final List noteResult;
 
 
-  UpdateNoteEvent(this.noteResult);
+  const UpdateNoteEvent(this.noteResult);
 
   @override
   // TODO: implement props
@@ -43,7 +43,7 @@ class RemoveNoteEvent extends NotesEvent {
   final List noteResult;
 
 
-  RemoveNoteEvent(this.noteResult);
+  const RemoveNoteEvent(this.noteResult);
 
   @override
   // TODO: implement props
@@ -54,7 +54,7 @@ class RemoveNoteEvent extends NotesEvent {
 class ToggleNoteEvent extends NotesEvent {
   final String noteTask;
 
-  ToggleNoteEvent(this.noteTask);
+  const ToggleNoteEvent(this.noteTask);
   @override
   // TODO: implement props
   List<Object?> get props => [noteTask];
